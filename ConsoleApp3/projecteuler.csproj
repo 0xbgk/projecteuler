@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{EE38AC15-FF16-486B-BAF6-8146EA679D55}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleApp3</RootNamespace>
-    <AssemblyName>ConsoleApp3</AssemblyName>
+    <RootNamespace>projecteuler</RootNamespace>
+    <AssemblyName>projecteuler</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,11 +42,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Problem10.cs" />
+    <Compile Include="Problem11.cs" />
+    <Compile Include="Problem12.cs" />
+    <Compile Include="Problem13.cs" />
     <Compile Include="Problem4.cs" />
     <Compile Include="Problem1.cs" />
     <Compile Include="Problem2.cs" />
     <Compile Include="Problem3.cs" />
     <Compile Include="Problem5.cs" />
+    <Compile Include="Problem6.cs" />
+    <Compile Include="Problem7.cs" />
+    <Compile Include="Problem8.cs" />
+    <Compile Include="Problem9.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

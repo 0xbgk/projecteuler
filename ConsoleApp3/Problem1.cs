@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace projecteuler
                     toplam += i;
                 }
             }
+           
             Console.WriteLine("{0}", toplam);
         }
 
