@@ -28,8 +28,10 @@ namespace projecteuler
             Problem8 pro8 = new Problem8();
             Problem9 pro9 = new Problem9();
             Problem10 pro10 = new Problem10();
+            Problem11 pro11 = new Problem11();
 
-            pro1.problem1();
+            pro11.problem11();
+            
 
             Console.Read();
         }
