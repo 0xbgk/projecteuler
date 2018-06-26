@@ -46,7 +46,6 @@ namespace projecteuler
                     toplam += sayi;
                     sayi++;
                     Console.WriteLine("{0}", toplam);
-
                 }
                 else
                 {

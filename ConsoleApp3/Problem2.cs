@@ -21,7 +21,6 @@ namespace projecteuler
             int sonuc = 0;
             while (count < range)
             {
-
                 //Console.WriteLine("{0}+{1} = {2}", sum2, sum1, sum2+sum1);
                 sum1 = sum2 + sum1;
                 loop = sum2;
