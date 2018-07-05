@@ -88,14 +88,122 @@ namespace projecteuler
 
             }
 
+
             for (int i = 0; i < 20; i++)
             {
-                for (int j = 0; j < 20; j++)
+                for (int x = 0; x < 20; x++)
                 {
-                    Console.Write(matrix[i, j]);
+                    Console.Write(matrix[i, x]);
                 }
             }
-            
+            string yazdir;
+
+            int yatay_hesapla()
+            {
+                int yatay = 0;
+                int yatay_max = 0;
+                Console.WriteLine("");
+                for (int i = 0; i < 20; i++)
+                {
+                    for (int j = 0; j < 17; j++)
+                    {
+                        yatay = Convert.ToInt32(matrix[i, j]) * Convert.ToInt32(matrix[i, j + 1]) * Convert.ToInt32(matrix[i, j + 2]) * Convert.ToInt32(matrix[i, j + 3]);
+
+                        if (yatay_max <= yatay)
+                        {
+                            yatay_max = yatay;
+                            yazdir = "[" + i + "," + j + "]" + matrix[i, j] + "[" + i + "," + (j + 1) + "]" + matrix[i, j + 1] + "[" + i + "," + (j + 2) + "]" + matrix[i, j + 2] + "[" + i + "," + (j + 3) + "]" + matrix[i, j + 3] + ">>> " + yatay_max.ToString();
+                            Console.WriteLine(yazdir);
+                        }
+                    }
+                }
+                Console.WriteLine("");
+                Console.WriteLine("----- " + "Yatay MAX = " + yatay_max + " -----");
+                return yatay_max;
+
+            }
+            int dikey_hesapla()
+            {
+                int dikey = 0;
+                int dikey_max = 0;
+                Console.WriteLine("");
+                for (int i = 0; i < 17; i++)
+                {
+                    for (int x = 0; x < 20; x++)
+                    {
+                        dikey = Convert.ToInt32(matrix[i, x]) * Convert.ToInt32(matrix[i + 1, x]) * Convert.ToInt32(matrix[i + 2, x]) * Convert.ToInt32(matrix[i + 3, x]);
+
+                        if (dikey_max <= dikey)
+                        {
+                            dikey_max = dikey;
+                            yazdir = "[" + i + "," + x + "]" + matrix[i, x] + "[" + (i + 1) + "," + x + "]" + matrix[(i + 1), x] + "[" + (i + 2) + "," + x + "]" + matrix[i + 2, x] + "[" + (i + 3) + "," + x + "]" + matrix[i + 3, x] + ">>> " + dikey_max.ToString();
+                            Console.WriteLine(yazdir);
+                        }
+                    }
+                }
+
+                Console.WriteLine("");
+                Console.WriteLine("----- " + "Dikey MAX = " + dikey_max + " -----");
+
+                return dikey_max;
+
+            }
+            int caprazsoldan_hesapla()
+            {
+                int caprazsoldan = 0;
+                int capraz_max = 0;
+                Console.WriteLine("");
+                for (int i = 0; i < 17; i++)
+                {
+                    for (int j = 0; j < 17; j++)
+                    {
+                        caprazsoldan = Convert.ToInt32(matrix[i, j]) * Convert.ToInt32(matrix[i + 1, j + 1]) * Convert.ToInt32(matrix[i + 2, j + 2]) * Convert.ToInt32(matrix[i + 3, j + 3]);
+
+                        if (capraz_max <= caprazsoldan)
+                        {
+                            capraz_max = caprazsoldan;
+                            yazdir = "[" + i + "," + j + "]" + matrix[i, j] + "[" + (i + 1) + "," + (j + 1) + "]" + matrix[i + 1, j + 1] + "[" + (i + 2) + "," + (j + 2) + "]" + matrix[i + 2, j + 2] + "[" + (i + 3) + "," + (j + 3) + "]" + matrix[i + 3, j + 3] + ">>> " + capraz_max.ToString();
+                            Console.WriteLine(yazdir);
+                        }
+                    }
+                }
+
+                Console.WriteLine("");
+                Console.WriteLine("----- " + "CaprazSoldan MAX = " + capraz_max + " -----");
+                return capraz_max;
+            }
+            int caprazsagdan_hesapla()
+            {
+                int caprazsagdan = 0;
+                int capraz_max2 = 0;
+                Console.WriteLine("");
+
+                for (int i = 0; i < 17; i++)
+                {
+                    for (int j = 19; j > 4; j--)
+                    {
+                        caprazsagdan = Convert.ToInt32(matrix[i, j]) * Convert.ToInt32(matrix[(i + 1), (j - 1)]) * Convert.ToInt32(matrix[(i + 2), (j - 2)]) * Convert.ToInt32(matrix[(i + 3), (j - 3)]);
+
+                        if (capraz_max2 <= caprazsagdan)
+                        {
+                            capraz_max2 = caprazsagdan;
+                            yazdir = "[" + i + "," + j + "]" + matrix[i, j] + "[" + (i + 1) + "," + (j - 1) + "]" + matrix[(i + 1), (j - 1)] + "[" + (i + 2) + "," + (j - 2) + "]" + matrix[(i + 2), (j - 2)] + "[" + (i + 3) + "," + (j - 3) + "]" + matrix[(i + 3), (j - 3)] + ">>> " + capraz_max2.ToString();
+                            Console.WriteLine(yazdir);
+                        }
+                    }
+                }
+
+                Console.WriteLine("");
+                Console.WriteLine("----- " + "CaprazSagdan MAX = " + capraz_max2 + " -----");
+                return capraz_max2;
+            }
+
+
+
+            yatay_hesapla();
+            dikey_hesapla();
+            caprazsoldan_hesapla();
+            caprazsagdan_hesapla();
 
         }
 
