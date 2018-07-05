@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace projecteuler
 {
     class Program
-    {             
+    {
         static void Main(string[] args)
         {
             Console.WriteLine("/██████╗  ██████╗ ██╗  ██╗");
@@ -15,23 +15,25 @@ namespace projecteuler
             Console.WriteLine("/██████╔╝██║  ███╗█████╔╝ ");
             Console.WriteLine("/██╔══██╗██║   ██║██╔═██╗ ");
             Console.WriteLine("/██████╔╝╚██████╔╝██║  ██╗");
-            Console.WriteLine("/╚═════╝  ╚═════╝ ╚═╝  ╚═╝");          
-            Console.WriteLine("/https://projecteuler.net/archives");          
+            Console.WriteLine("/╚═════╝  ╚═════╝ ╚═╝  ╚═╝");
+            Console.WriteLine("/https://projecteuler.net/archives");
 
-            Problem1 pro1 = new Problem1();
-            Problem2 pro2 = new Problem2();
-            Problem3 pro3 = new Problem3();
-            Problem4 pro4 = new Problem4();
-            Problem5 pro5 = new Problem5();
-            Problem6 pro6 = new Problem6();
-            Problem7 pro7 = new Problem7();
-            Problem8 pro8 = new Problem8();
-            Problem9 pro9 = new Problem9();
-            Problem10 pro10 = new Problem10();
-            Problem11 pro11 = new Problem11();
+            //Problem1 pro1 = new Problem1();
+            //Problem2 pro2 = new Problem2();
+            //Problem3 pro3 = new Problem3();
+            //Problem4 pro4 = new Problem4();
+            //Problem5 pro5 = new Problem5();
+            //Problem6 pro6 = new Problem6();
+            //Problem7 pro7 = new Problem7();
+            //Problem8 pro8 = new Problem8();
+            //Problem9 pro9 = new Problem9();
+            //Problem10 pro10 = new Problem10();
+            //Problem11 pro11 = new Problem11();
+            Problem12 pro12 = new Problem12();
 
-            pro11.problem11();
-            
+            pro12.problem12();
+
+
 
             Console.Read();
         }

@@ -10,8 +10,7 @@ namespace projecteuler
     {
         void problem5()
         {
-            int a = 1;
-            int boldu = 0;
+            int a = 1;            
             bool kontrol = true;
 
             do
