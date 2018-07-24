@@ -29,7 +29,7 @@ namespace projecteuler
         {
             bool asal = false;
             int kontrol = 0;
-            for (int i = 2; i <= x; i++)
+            for (int i = 1; i <= x; i++)
             {
                 if (x % i == 0)
                 {
@@ -40,7 +40,7 @@ namespace projecteuler
                     asal = false;
                     break;
                 }
-                else
+                else if (kontrol == 2)
                 {
                     asal = true;
                 }
@@ -54,58 +54,91 @@ namespace projecteuler
             return y;
         }
 
-        //public void problem12()
-        //{
-        //    int bolensayisi = 0;
-        //    int start = 1;
-        //    while (bolensayisi < 500)
-        //    {
-        //        for (int i = 1; i < triangle_number(start); i++)
-        //        {
-
-        //        }                
-        //        start++;
-        //    }
-
-        //}
+        public int bolenler(long x)
+        {
+            int start = 1;
+            for (int i = 1; i <= (x/2); i++)
+            {
+                if (x % i == 0)
+                {
+                    start++;
+                }
+            }
+            return start;
+        }
 
         public void problem12()
         {
+            int x = 1;
 
-            long triangle_number = 0;
-            int bolen = 0;
-            string bolenler;
-            bolenler = "";
-            bool devam = true;
-            while (devam)
+            while (true)
             {
-                for (int i = 1; ;)
+                Console.WriteLine(triangle_number(x) + " " + bolenler(triangle_number(x)));
+                if (bolenler(triangle_number(x)) >= 500)
                 {
-                    triangle_number += i;
-                    for (int j = 1; j <= (triangle_number); j++)
-                    {
-                        if (triangle_number % j == 0)
-                        {
-                            bolen++;
-                            bolenler += j + ",";
-                        }
-                    }
-
-                    Console.WriteLine(i + ". " + triangle_number + " " + bolen + "Bolen " + bolenler);
-                    Console.WriteLine();
-                    if (bolen == 500)
-                    {
-                        devam = false;
-                        break;
-                    }
-                    bolen = 0;
-                    bolenler = "";
-                    i++;
+                    break;
                 }
-
+                x++;
             }
+                              
+            
+
+
+            //for (int i = 1; i < 102; i++)
+            //{
+            //    for (int x = 1; x <= triangle_number(i); x++)
+            //    {
+            //        if (asal_kontrol(x))
+            //        {
+            //            if (triangle_number(i) % x == 0)
+            //            {
+            //                Console.WriteLine(" " + triangle_number(i) + " " + x +"bolenler" + bolenler(triangle_number(i)));
+            //            }
+            //        }
+
+            //    }
+            //    Console.WriteLine();
+            //}
 
         }
+
+        //public void problem12()
+        //{
+
+        //    long triangle_number = 0;
+        //    int bolen = 0;
+        //    string bolenler;
+        //    bolenler = "";
+        //    bool devam = true;
+        //    while (devam)
+        //    {
+        //        for (int i = 1; ;)
+        //        {
+        //            triangle_number += i;
+        //            for (int j = 1; j <= (triangle_number); j++)
+        //            {
+        //                if (triangle_number % j == 0)
+        //                {
+        //                    bolen++;
+        //                    bolenler += j + ",";
+        //                }
+        //            }
+
+        //            Console.WriteLine(i + ". " + triangle_number + " " + bolen + "Bolen " + bolenler);
+        //            Console.WriteLine();
+        //            if (bolen == 500)
+        //            {
+        //                devam = false;
+        //                break;
+        //            }
+        //            bolen = 0;
+        //            bolenler = "";
+        //            i++;
+        //        }
+
+        //    }
+
+        //}
 
     }
 }
