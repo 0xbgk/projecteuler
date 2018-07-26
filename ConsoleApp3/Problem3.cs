@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,12 +9,12 @@ namespace projecteuler
 {
     class Problem3
     {
-        void problem3()
+        public void problem3()
         {
 
             //The prime factors of 13195 are 5, 7, 13 and 29.
             //What is the largest prime factor of the number 600851475143 ?
-
+            Stopwatch clock = Stopwatch.StartNew();
             bool asalmi(long x)
             {
                 bool asal = false;
@@ -49,6 +50,9 @@ namespace projecteuler
                     }
                 }
             }
+
+            clock.Stop();
+            Console.WriteLine("Solution took {0} seconds", (double)clock.ElapsedMilliseconds / 1000);
 
         }
 

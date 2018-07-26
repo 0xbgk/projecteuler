@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,11 +9,12 @@ namespace projecteuler
 {
     class Problem10
     {
-        void problem10()
+        public void problem10()
         {
             //The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
             //Find the sum of all the primes below two million.
 
+            Stopwatch clock = Stopwatch.StartNew();
             long toplam = 0;
             int sayi = 2;
 
@@ -54,7 +56,8 @@ namespace projecteuler
 
             }
 
-
+            clock.Stop();
+            Console.WriteLine("Solution took {0} seconds", (double)clock.ElapsedMilliseconds / 1000);
 
         }
 

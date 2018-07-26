@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,8 +9,9 @@ namespace projecteuler
 {
     class Problem9
     {
-        void problem9()
+        public void problem9()
         {
+            Stopwatch clock = Stopwatch.StartNew();
             double a, b, c;
             a = 1;
             b = 1;
@@ -35,7 +37,8 @@ namespace projecteuler
 
 
             sonuc = a * b * c;
-
+            clock.Stop();
+            Console.WriteLine("Solution took {0} seconds", (double)clock.ElapsedMilliseconds / 1000);
         }
 
     }

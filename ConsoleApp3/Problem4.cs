@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,11 +9,11 @@ namespace projecteuler
 {
     class Problem4
     {
-        void problem4()
+        public void problem4()
         {
             //A palindromic number reads the same both ways. The largest palindrome made from the product of two 2 - digit numbers is 9009 = 91 × 99.
             //Find the largest palindrome made from the product of two 3 - digit numbers.
-
+            Stopwatch clock = Stopwatch.StartNew();
             int carpim = 0;
             string hesapla;
             int hesapla_uzunluk;
@@ -45,6 +46,9 @@ namespace projecteuler
                     }
                 }
             }
+
+            clock.Stop();
+            Console.WriteLine("Solution took {0} seconds", (double)clock.ElapsedMilliseconds / 1000);
         }
 
     }

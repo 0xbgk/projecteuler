@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,6 +36,7 @@ namespace projecteuler
 
             //The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
             //What is the greatest product of four adjacent numbers in the same direction(up, down, left, right, or diagonally) in the 20×20 grid ?            
+            Stopwatch clock = Stopwatch.StartNew();
             int rows = 0;
             int columns = 0;
             int sayac = 0;
@@ -205,6 +207,8 @@ namespace projecteuler
             caprazsoldan_hesapla();
             caprazsagdan_hesapla();
 
+            clock.Stop();
+            Console.WriteLine("Solution took {0} seconds", (double)clock.ElapsedMilliseconds / 1000);
         }
 
     }

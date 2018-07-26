@@ -38,8 +38,10 @@ namespace projecteuler
             //Problem13 pro13 = new Problem13();
             //Problem14 pro14 = new Problem14();
 
-            
-            
+            Problem22 pro22 = new Problem22();
+
+
+            pro22.problem22();
 
 
 

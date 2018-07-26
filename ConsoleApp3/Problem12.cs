@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -69,6 +70,7 @@ namespace projecteuler
 
         public void problem12()
         {
+            Stopwatch clock = Stopwatch.StartNew();
             int x = 1;
 
             while (true)
@@ -80,10 +82,11 @@ namespace projecteuler
                 }
                 x++;
             }
-                              
-            
 
 
+
+            clock.Stop();
+            Console.WriteLine("Solution took {0} seconds", (double)clock.ElapsedMilliseconds / 1000);
             //for (int i = 1; i < 102; i++)
             //{
             //    for (int x = 1; x <= triangle_number(i); x++)

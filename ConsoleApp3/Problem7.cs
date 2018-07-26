@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,10 +9,11 @@ namespace projecteuler
 {
     class Problem7
     {
-        void problem7()
+        public void problem7()
         {
             //By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
             //What is the 10 001st prime number ?
+            Stopwatch clock = Stopwatch.StartNew();
 
             int asalmi = 1;
             int bolen_sayisi = 0;
@@ -43,6 +45,8 @@ namespace projecteuler
                 }
             } while (true);
 
+            clock.Stop();
+            Console.WriteLine("Solution took {0} seconds", (double)clock.ElapsedMilliseconds / 1000);
         }
 
     }

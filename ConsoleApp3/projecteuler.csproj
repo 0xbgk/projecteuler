@@ -48,6 +48,12 @@
     <Compile Include="Problem13.cs" />
     <Compile Include="Problem14.cs" />
     <Compile Include="Problem16.cs" />
+    <Compile Include="Problem17.cs" />
+    <Compile Include="Problem20.cs" />
+    <Compile Include="Problem21.cs" />
+    <Compile Include="Problem22.cs" />
+    <Compile Include="Problem24.cs" />
+    <Compile Include="Problem25.cs" />
     <Compile Include="Problem4.cs" />
     <Compile Include="Problem1.cs" />
     <Compile Include="Problem2.cs" />
