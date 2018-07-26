@@ -10,6 +10,11 @@ namespace projecteuler
     {
         static void Main(string[] args)
         {
+            //Timer
+            //Stopwatch clock = Stopwatch.StartNew();
+            //clock.Stop();
+            //Console.WriteLine("Solution took {0} seconds", (double)clock.ElapsedMilliseconds / 1000);
+
             Console.WriteLine("/██████╗  ██████╗ ██╗  ██╗");
             Console.WriteLine("/██╔══██╗██╔════╝ ██║ ██╔╝");
             Console.WriteLine("/██████╔╝██║  ███╗█████╔╝ ");
@@ -31,9 +36,10 @@ namespace projecteuler
             //Problem11 pro11 = new Problem11();
             //Problem12 pro12 = new Problem12();
             //Problem13 pro13 = new Problem13();
-            Problem14 pro14 = new Problem14();
+            //Problem14 pro14 = new Problem14();
 
-            pro14.problem14();
+            
+            
 
 
 

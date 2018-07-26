@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,8 @@ namespace projecteuler
        //837799 525max chain
         public void problem14()
         {
+            Stopwatch clock = Stopwatch.StartNew();
+           
             int count;
             long calc;
             long temp = 0;
@@ -62,6 +65,9 @@ namespace projecteuler
                     temp = count;
                 }
             }
+            clock.Stop();
+
+            Console.WriteLine("Solution took {0} seconds", (double)clock.ElapsedMilliseconds/1000);
             Console.WriteLine(tempo.ToString()+" " +temp.ToString() + "max chain");
 
         }

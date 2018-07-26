@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,8 @@ namespace projecteuler
     {
         public void problem1()
         {
+            Stopwatch clock = Stopwatch.StartNew();
+
             // If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
             // Find the sum of all the multiples of 3 or 5 below 1000.
             int toplam = 0;
@@ -22,7 +25,9 @@ namespace projecteuler
                     toplam += i;
                 }
             }
+            clock.Stop();
 
+            Console.WriteLine("Solution took {0} seconds", (double)clock.ElapsedMilliseconds / 1000);
             Console.WriteLine("{0}", toplam);
         }
 
