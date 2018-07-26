@@ -21,5 +21,49 @@ namespace projecteuler
         //Which starting number, under one million, produces the longest chain?
 
         //NOTE: Once the chain starts the terms are allowed to go above one million.
+       
+       //837799 525max chain
+        public void problem14()
+        {
+            int count;
+            long calc;
+            long temp = 0;
+            long tempo = 0;
+
+            for (int i = 835000; i <= 837800; i++)
+            {
+                Console.Write(i + "->");
+
+                calc = i;
+                count = 0;                
+
+                while (calc > 1)
+                {
+                    if (calc % 2 == 0)
+                    {
+                        calc = calc / 2;
+                        count++;
+                        Console.Write(calc + "->");
+                    }
+
+                    else
+                    {
+                        calc = (calc * 3) + 1;
+                        count++;
+                        Console.Write(calc + "->");
+
+                    }
+                }
+                count++;
+                Console.WriteLine("// " + count.ToString() + " chain");
+                if (count > temp)
+                {
+                    tempo = i;
+                    temp = count;
+                }
+            }
+            Console.WriteLine(tempo.ToString()+" " +temp.ToString() + "max chain");
+
+        }
     }
 }

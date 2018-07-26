@@ -30,9 +30,10 @@ namespace projecteuler
             //Problem10 pro10 = new Problem10();
             //Problem11 pro11 = new Problem11();
             //Problem12 pro12 = new Problem12();
-            Problem13 pro13 = new Problem13();
+            //Problem13 pro13 = new Problem13();
+            Problem14 pro14 = new Problem14();
 
-            pro13.problem13();
+            pro14.problem14();
 
 
 
